@@ -2,6 +2,34 @@
 
 一个简单的订单管理系统，包含订单处理和邮件通知功能。
 
+## 提示词
+
+```
+生成一个order的文件。包括class NotificationService :
+def send_email(self, user_email, message):       # 实际发送邮件的复杂逻辑 ...
+print(f"Email sent to {user_email}")
+
+return True   class OrderService :
+def    init   (self, notification_service):
+self .notification_service = notification_serv
+
+def place_order(self, user_email, order_details)  # ...处理订单逻辑 ...
+print("Order placed successfully .")
+# 下单成功后发送邮件
+self.notification_service.send_email(
+user_email,
+"Your order was successful!"
+)
+return True
+
+
+@order.py 
+请为  OrderService 的  place_order 方法编写集成测试。为每个测试用例起一个清晰的、能反映其意图的名字。
+1. 使用  Python 的   `unittest .mock` 来模拟   `NotificationService`。
+2. 验证当  `place_order` 被调用时， `notification_service .send_email` 方法
+3. 生成一份readme
+```
+
 ## 项目概述
 
 本项目实现了一个基本的订单服务系统，主要功能包括：
